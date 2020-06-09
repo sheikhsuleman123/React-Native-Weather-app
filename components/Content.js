@@ -5,7 +5,7 @@ export default class Content extends Component {
     render() {
         return (
             <View>
-                <Text> content </Text>
+                <Text>  </Text>
             </View>
         )
     }

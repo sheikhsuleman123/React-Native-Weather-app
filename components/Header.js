@@ -1,12 +1,43 @@
 import React, { PureComponent } from 'react'
-import { Text, View } from 'react-native'
+import {StyleSheet, Text, View, Image } from 'react-native'
 
 export default class Header extends PureComponent {
     render() {
         return (
             <View>
-                <Text> header  </Text>
+                <Text style={styles.text}> Weather Forcast</Text>
+                <Image source={require('../assets/sun.png')} style={styles.img} />
+                <Text style={styles.degree}>31,9&deg; </Text>
+                <Text style={styles.cityname}> FSD </Text>
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+  text: {
+    fontFamily:'Arial',
+      fontSize: 20,
+      color: '#333',
+      fontWeight: 'bold',
+      textAlign:'center',
+  },
+  img : {
+    height: 50,
+    width: 50,
+    alignSelf:'center',
+    marginVertical:20
+  },
+  degree: {
+      fontFamily: 'Arial',
+      fontSize: 40,
+      fontWeight: '900',
+      textAlign: 'center'
+  },
+  cityname: {
+      fontSize: 23,
+      color:'#616A6B',
+      textAlign:'center',
+      marginVertical: 10
+  }
+})

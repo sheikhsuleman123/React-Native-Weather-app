@@ -5,7 +5,7 @@ export default class Footer extends Component {
     render() {
         return (
             <View>
-                <Text> Footer </Text>
+                <Text>  </Text>
             </View>
         )
     }
