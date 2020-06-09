@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     alignSelf:'center',
-    marginVertical:20
+    marginVertical:7
   },
   degree: {
       fontFamily: 'Arial',
-      fontSize: 40,
+      fontSize: 30,
       fontWeight: '900',
       textAlign: 'center'
   },
@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
       fontSize: 23,
       color:'#616A6B',
       textAlign:'center',
-      marginVertical: 10
+      marginVertical: 7
   }
 })

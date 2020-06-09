@@ -4,14 +4,17 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 export default class Card extends Component {
     render() {
         return (
-            <View style={{backgroundColor:'orange'}}>
-              <View style={{...styles.bgCard,backgroundColor:'orange' }}> 
-                <Text style={styles.text} > 18:00 </Text>
-                <Image source={require('../../assets/rain.png')} style={{...styles.img,marginVertical:20}} />
+            <View style={{backgroundColor:this.props.bgcolor,alignItems:'center',borderRadius:10}}>
+              
+              <View style={{...styles.bgCard,backgroundColor:this.props.color1,borderTopRightRadius:10,borderTopLeftRadius:10, ...this.props.style}}> 
+                <Text style={styles.time} > 18:88 </Text>
+                <Image source={this.props.img} style={{...styles.img,}} />
               </View>
-               <View style={{...styles.bgCard ,zIndex: -1,backgroundColor:'#E74C3C',borderTopLeftRadius:60  }}>
-                 <Text style={styles.text}> 12 &deg;</Text>
+
+               <View style={{...styles.bgCard ,zIndex: -1,backgroundColor:this.props.color2,...this.props.style,borderBottomRightRadius:10,borderBottomLeftRadius:10  }}>
+                 <Text style={styles.deg}> 12 &deg;</Text>
                </View>
+            
             </View>
         )
     }
@@ -19,22 +22,28 @@ export default class Card extends Component {
 
 const styles = StyleSheet.create({
     img : {
-        height: 50,
-        width: 50,
-        marginTop: 75,
+        height: 45,
+        width: 45,
+        marginTop: 70,
         alignSelf: 'center',
         position:'absolute',
         zIndex: 99,
     },
     bgCard : {
-        width:'100%',
-        height: 130,
+        width: 100,
+        height: 100,
         alignSelf:'center',
     },
-    text : {
+    time : {
         color: '#fff',
-        fontSize:25,
+        fontSize:18,
         textAlign:'center',
-        marginVertical: 17
+        marginTop: 10
+    },
+    deg: {
+        color: '#fff',
+        fontSize:18,
+        textAlign:'center',
+        marginTop: '60%'
     }
 })
