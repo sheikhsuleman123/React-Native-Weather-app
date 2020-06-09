@@ -8,7 +8,7 @@ export default class Header extends PureComponent {
                 <Text style={styles.text}> Weather Forcast</Text>
                 <Image source={require('../assets/sun.png')} style={styles.img} />
                 <Text style={styles.degree}>31,9&deg; </Text>
-                <Text style={styles.cityname}> FSD </Text>
+                <Text style={styles.cityname}> Faisalabad </Text>
             </View>
         )
     }
