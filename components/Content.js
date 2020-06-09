@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
+import Card from './Card/Card';
+
 export default class Content extends Component {
     render() {
         return (
             <View>
-                <Text>  </Text>
+                <Card />
             </View>
         )
     }
