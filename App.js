@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, SafeAreaView } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, SafeAreaView } from 'react-native';
 
 // Component
 import Header from './components/Header';
@@ -10,10 +10,12 @@ let url = 'https://api.openweathermap.org/data/2.5/forecast?q=Faisalabad,pk&appi
 
 export default class App extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
-      list: null,
-      detail: null,
+      report : {
+        list: null,
+        detail: null,
+      }
     }
     this.getWeatherReport = this.getWeatherReport.bind(this);
   }
@@ -31,16 +33,20 @@ export default class App extends Component {
 
  async componentDidMount() {
    await this.getWeatherReport();
-    console.log(this.state.report);
   }
   render() {
+    if (this.state.report.list === null || this.state.report.detail === null ){
+      return (
+        <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+      <ActivityIndicator color='red' size="large" />
+       </View>
+      )
+    }
     return (
-  
-  <SafeAreaView style={{ flex: 1 }}>
-        
+      <SafeAreaView style={{ flex: 1 }}>
        <View style={styles.container}>
-         <Header />
-         <Content time={"12"} temp={this.state.temp} />
+         <Header data={[this.state.report.list[0],this.state.report.detail ]} />
+         <Content  />
          <Footer />
        </View>
       </SafeAreaView>
