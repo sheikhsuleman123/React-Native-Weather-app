@@ -47,7 +47,7 @@ export default class App extends Component {
        <View style={styles.container}>
          <Header data={[this.state.report.list[0],this.state.report.detail ]} />
          <Content data={this.state.report.list} />
-         <Footer />
+         <Footer data={this.state.report.list[0]} />
        </View>
       </SafeAreaView>
     )

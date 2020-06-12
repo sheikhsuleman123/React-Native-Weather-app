@@ -8,12 +8,12 @@ export default class Footer extends Component {
                 <Text style={styles.heading}> Additional Infom </Text>
                 
                 <View style={styles.container}>
-                    <Text style={styles.minfo}>Wind:          <Text style={styles.sinfo}>12(m/h) </Text> </Text>
-                    <Text style={styles.minfo}>Humidity: <Text style={styles.sinfo}>       55%</Text> </Text>    
+                    <Text style={styles.minfo}>Wind:          <Text style={styles.sinfo}>{this.props.data.wind.speed} (m/h) </Text> </Text>
+        <Text style={styles.minfo}>Humidity: <Text style={styles.sinfo}>       {this.props.data.main.humidity}%</Text> </Text>    
                 </View>
                 <View style={styles.container}>
-                    <Text style={styles.minfo}>Visibility:     <Text style={styles.sinfo}>25km </Text> </Text>
-                    <Text style={styles.minfo}>UV:                       <Text style={styles.sinfo}> 2</Text> </Text>    
+        <Text style={styles.minfo}>Visibility:   <Text style={styles.sinfo}>{this.props.data.weather[0].description} km </Text> </Text>
+                    <Text style={styles.minfo}>Uv:            <Text style={styles.sinfo}> 1</Text> </Text>    
                 </View>
                 
             </View>
