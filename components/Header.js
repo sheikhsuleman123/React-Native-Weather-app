@@ -6,7 +6,7 @@ export default class Header extends PureComponent {
         return (
             <View>
                 <Text style={styles.text}> Weather Forcast</Text>
-                <Image source={{ uri: `https://openweathermap.org/img/wn/${this.props.data[0].weather[0].icon}@2x.png`}} style={styles.img} />
+                <Image source={{ uri: `https://openweathermap.org/img/wn/${this.props.data[0].weather[0].icon}@2x.png` }} style={styles.img} />
                 <Text style={styles.degree}> {this.props.data[0].main.temp}&deg; </Text>
                 <Text style={styles.cityname}> {this.props.data[1].name}, {this.props.data[1].country} </Text>
             </View>

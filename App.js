@@ -46,7 +46,7 @@ export default class App extends Component {
       <SafeAreaView style={{ flex: 1 }}>
        <View style={styles.container}>
          <Header data={[this.state.report.list[0],this.state.report.detail ]} />
-         <Content  />
+         <Content data={this.state.report.list} />
          <Footer />
        </View>
       </SafeAreaView>
