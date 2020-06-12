@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     img : {
         height: 80,
         width: 80,
-        marginTop: 70,
+        marginTop: 60,
         alignSelf: 'center',
         position:'absolute',
         zIndex: 99,
