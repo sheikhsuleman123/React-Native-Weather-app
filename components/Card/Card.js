@@ -7,7 +7,7 @@ export default class Card extends Component {
             <View style={{backgroundColor:this.props.bgcolor,alignItems:'center',borderRadius:10}}>
               
               <View style={{...styles.bgCard,backgroundColor:this.props.color1,borderTopRightRadius:10,borderTopLeftRadius:10, ...this.props.style}}> 
-                <Text style={styles.time} > 18:88 </Text>
+                <Text style={styles.time} > 1800 </Text>
                 <Image source={this.props.img} style={{...styles.img,}} />
               </View>
 

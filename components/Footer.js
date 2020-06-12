@@ -13,7 +13,7 @@ export default class Footer extends Component {
                 </View>
                 <View style={styles.container}>
                     <Text style={styles.minfo}>Visibility:     <Text style={styles.sinfo}>25km </Text> </Text>
-                    <Text style={styles.minfo}>UpV:                       <Text style={styles.sinfo}> 2</Text> </Text>    
+                    <Text style={styles.minfo}>UV:                       <Text style={styles.sinfo}> 2</Text> </Text>    
                 </View>
                 
             </View>
